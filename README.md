@@ -19,16 +19,8 @@ Java-порт пет-проекта [Steam_UI_autotests](https://github.com/vale
 
 ### Used Tools
 
-<img title="Java" src="screenshots/icons/java.svg" height="40" width="40"/>
-<img title="Selenide" src="screenshots/icons/selenide.png" height="40" width="40"/>
-<img title="JUnit5" src="screenshots/icons/junit5.svg" height="40" width="40"/>
-<img title="Maven" src="screenshots/icons/maven.svg" height="40" width="40"/>
-<img title="GitHub" src="screenshots/icons/github.svg" height="40" width="40"/>
-<img title="Docker" src="screenshots/icons/docker.svg" height="40" width="40"/>
-<!-- <img title="Selenoid" src="screenshots/icons/selenoid.png" height="40" width="40"/> -->
-<img title="IntelliJ IDEA" src="screenshots/icons/intellij-idea.svg" height="40" width="40"/>
-<img title="Jenkins" src="screenshots/icons/jenkins-original.svg" height="40" width="40"/>
-<!-- <img title="Allure" src="screenshots/icons/allure.svg" height="40" width="40"/> -->
+<img title="Java" src="screenshots/icons/java.svg" height="40" width="40"/> <img title="Selenide" src="screenshots/icons/selenide.png" height="40" width="40"/> <img title="JUnit5" src="screenshots/icons/junit5.svg" height="40" width="40"/> <img title="Maven" src="screenshots/icons/maven.svg" height="40" width="40"/> <img title="GitHub" src="screenshots/icons/github.svg" height="40" width="40"/>
+<img title="Docker" src="screenshots/icons/docker.svg" height="40" width="40"/> <!-- <img title="Selenoid" src="screenshots/icons/selenoid.png" height="40" width="40"/> --> <img title="IntelliJ IDEA" src="screenshots/icons/intellij-idea.svg" height="40" width="40"/> <img title="Jenkins" src="screenshots/icons/jenkins-original.svg" height="40" width="40"/> <!-- <img title="Allure" src="screenshots/icons/allure.svg" height="40" width="40"/> -->
 
 ---
 
