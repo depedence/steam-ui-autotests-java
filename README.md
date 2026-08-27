@@ -1,8 +1,3 @@
-# Take Jenkins administrator password
-
-`docker exec jenkins cat //var/jenkins_home/secrets/initialAdminPassword`
-
-
 # <a target="_blank" href="https://store.steampowered.com/">Steam</a> UI Autotests (Java + Selenide) — Pet Project by depedence
 
 ![main page screenshot](screenshots/steam_main_page.png)
@@ -120,6 +115,12 @@ The project includes a `Jenkinsfile` for a declarative Jenkins Pipeline. Jenkins
 #### Graphs
 
 ![allure_report graph](screenshots/Allure_graphics.png)
+
+---
+
+### Take Jenkins administrator password
+
+`docker exec jenkins cat //var/jenkins_home/secrets/initialAdminPassword`
 
 ---
 
