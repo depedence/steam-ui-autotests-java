@@ -18,9 +18,7 @@ public class SearchPage {
 
     @Step("Find game by title: {gameTitle}")
     public void findGameByTitle(String gameTitle) {
-        RetryUtils.retry(() -> {
-            $("input[name='term']").setValue(gameTitle).pressEnter();
-        });
+        RetryUtils.retry(() -> $("input[name='term']").setValue(gameTitle).pressEnter());
     }
 
     @Step("Open first game from search results")

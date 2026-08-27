@@ -1,9 +1,15 @@
 version: "3"
 
+networks:
+  selenoid-net:
+    driver: bridge
+
 services:
   selenoid:
     image: aerokube/selenoid:latest-release
     container_name: selenoid
+    networks:
+      - selenoid-net
     ports:
       - "4444:4444"
     volumes:
@@ -11,14 +17,34 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./video:/opt/selenoid/video
     environment:
-      - OVERRIDE_VIDEO_OUTPUT_DIR=/opt/selenoid/video
-    command: ["-conf", "/etc/selenoid/browsers.json", "-video-output-dir", "/opt/selenoid/video", "-limit", "5"]
+      - OVERRIDE_VIDEO_OUTPUT_DIR=${PWD}/video
+    command:
+      - "-conf"
+      - "/etc/selenoid/browsers.json"
+      - "-video-output-dir"
+      - "/opt/selenoid/video"
+      - "-limit"
+      - "5"
+      - "-container-network"
+      - "selenoid_selenoid-net"
 
   selenoid-ui:
     image: aerokube/selenoid-ui:latest-release
     container_name: selenoid-ui
+    networks:
+      - selenoid-net
     links:
       - selenoid
     ports:
       - "8080:8080"
-    command: ["--selenoid-uri", "http://selenoid:4444"]
+    command: [ "--selenoid-uri", "http://selenoid:4444" ]
+
+  jenkins:
+    image: jenkins/jenkins:lts-jdk17
+    container_name: jenkins
+    networks:
+      - selenoid-net
+    ports:
+      - "8081:8080"
+    volumes:
+      - jenkins_home:/var/jenkins_home
